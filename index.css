@@ -48,6 +48,7 @@ body {
   font-weight: 600;
   color: var(--very-dark-blue);
   text-align: center;
+  margin-top: 40px;
 }
 .topic {
   font-weight: 400;
@@ -95,4 +96,25 @@ body {
 }
 .box:nth-of-type(3) {
   border-top-color: var(--blue);
+}
+@media (max-width: 450px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+  .box:first-of-type,
+  .box:nth-of-type(3) {
+    transform: translateY(0);
+  }
+  .header {
+    font-size: 1rem;
+  }
+  .paragraph {
+    width: 80%;
+  }
+}
+@media (max-width: 1000px) and (min-width: 450px) {
+  .box > p {
+    width: 100%;
+  }
 }
